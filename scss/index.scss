@@ -1,0 +1,87 @@
+@use 'colores';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  min-height: 100vdh;
+  background-color: colores.$lightBlue;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  padding: .8rem 4rem;
+  background-color: colores.$mainBlue;
+
+  .logo {
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .school-name {
+    color: colores.$lightBlue;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    user-select: none;
+  }
+
+  .btn-login {
+    padding: .4rem 1.4rem;
+    border: none;
+    border-radius: 1.8rem;
+    font-size: 1rem;
+    color: colores.$mainBlue;
+    background-color: colores.$lightBlue;
+    outline: none;
+
+    &:hover {
+      color: colores.$lightBlue;
+      background-color: colores.$lightGray;
+      cursor: pointer;
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  height: calc(100dvh - 6rem);
+  padding: 2rem 4rem;
+
+  div {
+    font-weight: bolder;
+  }
+
+  .prueva1 {
+    font-size: 1rem;
+    color: colores.$lightGray;
+  }
+
+  .prueva2 {
+    font-size: 1rem;
+    color: colores.$mainBlue;
+    //! usar $mainBlue como color de letra principal (sobre $lightBlue)
+  }
+
+  .prueva3 {
+    font-size: 1rem;
+    color: colores.$mediumBlue;
+  }
+
+  .prueva4 {
+    font-size: 1rem;
+    color: colores.$darkGray;
+  }
+}
